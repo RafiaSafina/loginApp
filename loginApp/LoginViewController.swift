@@ -8,17 +8,26 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet var addNameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
     let userName = "User"
     let password = "password"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func logInButton() {
-        
+        switch (addNameTextField.text,passwordTextField.text) {
+        case ("User", "password"):
+            print("ok")
+        default:
+            showWrongDataAlert()
+            passwordTextField.text = ""
+        }
     }
     
     @IBAction func showUserNameButtonTapped() {
@@ -37,5 +46,15 @@ class LoginViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
+    private func showWrongDataAlert() {
+        let alert = UIAlertController(title: "Invalid login or password", message: "Please, enter correct login and password", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
 
