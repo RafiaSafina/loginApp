@@ -23,6 +23,9 @@
                                 <state key="normal" title="Log in">
                                     <color key="titleColor" systemColor="tintColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="nWa-G3-yit"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tx2-PK-2tq">
                                 <rect key="frame" x="20" y="512.66666666666663" width="388" height="33"/>
@@ -34,6 +37,9 @@
                                         <state key="normal" title="Forgot User Name?">
                                             <color key="titleColor" systemColor="tintColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showUserNameButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="in5-Ys-cCH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-Zf-FeB">
                                         <rect key="frame" x="209" y="0.0" width="179" height="33"/>
@@ -42,6 +48,9 @@
                                         <state key="normal" title="Forgot Password?">
                                             <color key="titleColor" systemColor="tintColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showPasswordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Q4-4e-bru"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
