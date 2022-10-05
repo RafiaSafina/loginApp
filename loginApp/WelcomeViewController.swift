@@ -30,7 +30,6 @@ final class WelcomeViewController: UIViewController {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         welcomeLabel.text = "Welcome,\(username)!"
     }
-    
 }
 
 extension UIView {
