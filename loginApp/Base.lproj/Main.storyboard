@@ -89,14 +89,14 @@
                     <connections>
                         <outlet property="addNameTextField" destination="zRb-Xn-hS8" id="QPb-ES-M93"/>
                         <outlet property="passwordTextField" destination="S7U-Pk-fYL" id="P6Z-Bm-x2W"/>
-                        <segue destination="bOR-RR-prg" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="5aN-g0-J4R"/>
+                        <segue destination="UQw-fL-Zr0" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="5aN-g0-J4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Info-->
         <scene sceneID="eAP-cC-vjK">
             <objects>
                 <viewController id="bOR-RR-prg" customClass="WelcomeViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,6 +134,7 @@
                             <constraint firstItem="C7r-zp-HfS" firstAttribute="centerY" secondItem="SLF-S8-fZj" secondAttribute="centerY" id="NO8-eJ-IyT"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle" catalog="system" selectedImage="info" id="10I-I8-qlp"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="T72-Fi-Eu0" id="eWU-dQ-s9a"/>
                     </connections>
@@ -141,10 +142,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91j-oG-IFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="8MU-fJ-rbF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="679" y="758"/>
+        </scene>
+        <!--Raya-->
+        <scene sceneID="idh-Ln-hiD">
+            <objects>
+                <viewController id="asu-vA-IBt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTP-wn-rhv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GbU-ia-9Fz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Raya" image="person" catalog="system" selectedImage="person.fill.questionmark" id="yEy-6R-uGQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xz-Rd-rMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377" y="758"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tST-Eb-Mhv">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UQw-fL-Zr0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p80-ne-a0h">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance" backgroundImage="person.fill" catalog="system"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bOR-RR-prg" kind="relationship" relationship="viewControllers" id="2Lb-rw-Cws"/>
+                        <segue destination="asu-vA-IBt" kind="relationship" relationship="viewControllers" id="e8A-i0-qij"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifY-ue-294" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="679.20000000000005" y="81.409295352323838"/>
         </scene>
     </scenes>
     <resources>
+        <image name="info" catalog="system" width="93" height="128"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill.questionmark" catalog="system" width="128" height="104"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
