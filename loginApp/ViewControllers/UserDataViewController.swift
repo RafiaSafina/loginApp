@@ -24,6 +24,7 @@ class UserDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = user.person.fullName
+        photo.image = UIImage(named: "myPhoto")
         nameLabel.text = user.person.name
         surnameLabel.text = user.person.surname
         jobLabel.text = user.person.job

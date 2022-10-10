@@ -35,7 +35,7 @@ struct Person {
             name: "Rafia",
             surname: "Safina",
             job: "Fitness coach",
-            photo: "Assets.xcassets",
+            photo: "myPhoto",
             bio: """
             I was born in Kazan. dkjfskdjfksdjflkjdsljfldsksd
             dlnflsdjhfljhdjfhskhhsdkjfhjdhfjhsdjfhsdkjfhsdkfhdsjkf
